@@ -6,7 +6,8 @@
       "title": "Компьютеры и ноутбуки",
       "active": true,
       "parent": null,
-      "favourite": true
+      "favourite": true,
+      "image": "products/icons/Компьютеры и ноутбуки/computers_and_laptops.svg"
     }
   },
   {
@@ -16,7 +17,8 @@
       "title": "Компьютеры",
       "active": true,
       "parent": 1,
-      "favourite": true
+      "favourite": true,
+      "image": "products/icons/Компьютеры и ноутбуки/Компьютеры/computers.svg"
     }
   },
   {
@@ -26,7 +28,8 @@
       "title": "Мониторы",
       "active": true,
       "parent": 1,
-      "favourite": true
+      "favourite": true,
+      "image": "products/icons/Компьютеры и ноутбуки/Мониторы/monitors.svg"
     }
   },
   {
@@ -36,7 +39,9 @@
       "title": "Ноутбуки",
       "active": true,
       "parent": 1,
-      "favourite": true
+      "favourite": true,
+      "image": "products/icons/Компьютеры и ноутбуки/Ноутбуки/laptop.svg"
+
     }
   },
   {
@@ -46,7 +51,8 @@
       "title": "Смартфоны и гаджеты",
       "active": true,
       "parent": null,
-      "favourite": true
+      "favourite": true,
+      "image": "products/icons/Смартфоны и гаджеты/smartphones_and_gadgets.svg"
     }
   },
   {
@@ -56,7 +62,8 @@
       "title": "Смартфоны, мобильные телефоны",
       "active": true,
       "parent": 5,
-      "favourite": true
+      "favourite": true,
+      "image": "products/icons/Смартфоны и гаджеты/Смартфоны, мобильные телефоны/smartphones.svg"
     }
   },
   {
@@ -66,7 +73,8 @@
       "title": "Планшеты",
       "active": true,
       "parent": 5,
-      "favourite": true
+      "favourite": true,
+      "image": "products/icons/Смартфоны и гаджеты/Планшеты/tablet.svg"
     }
   },
   {
@@ -76,7 +84,8 @@
       "title": "ТВ, аудио, видео",
       "active": true,
       "parent": null,
-      "favourite": true
+      "favourite": true,
+      "image": "products/icons/ТВ, аудио, видео/tv_audio_video.svg"
     }
   },
   {
@@ -86,7 +95,8 @@
       "title": "Акустические системы",
       "active": true,
       "parent": 8,
-      "favourite": true
+      "favourite": true,
+      "image": "products/icons/ТВ, аудио, видео/Акустические системы/acoustic.svg"
     }
   },
   {
@@ -96,7 +106,8 @@
       "title": "Телевизоры",
       "active": true,
       "parent": 8,
-      "favourite": true
+      "favourite": true,
+      "image": "products/icons/ТВ, аудио, видео/Телевизоры/tv.svg"
     }
   },
   {
@@ -106,7 +117,8 @@
       "title": "Техника для дома",
       "active": true,
       "parent": null,
-      "favourite": true
+      "favourite": true,
+      "image": "products/icons/Техника для дома/home_appliances.svg"
     }
   },
   {
@@ -116,7 +128,8 @@
       "title": "Холодильники",
       "active": true,
       "parent": 11,
-      "favourite": true
+      "favourite": true,
+      "image": "products/icons/Техника для дома/Холодильники/fridge.svg"
     }
   },
   {
@@ -126,7 +139,8 @@
       "title": "Стиральные машины",
       "active": true,
       "parent": 11,
-      "favourite": true
+      "favourite": true,
+      "image": "products/icons/Техника для дома/Стиральные машины/bathroom.svg"
     }
   },
   {

@@ -29,6 +29,7 @@ class Category(models.Model):
     parent = models.ForeignKey('self', on_delete=models.PROTECT, blank=True, null=True, related_name='subcategories',
                                verbose_name='родитель')
     favourite = models.BooleanField(default=False, verbose_name='избранная категория')
+    image = models.FileField(upload_to=category_image_directory_path, verbose_name='изображение', null=True)
 
     class Meta:
         ordering = ["title", "pk"]
@@ -52,7 +53,7 @@ class CategoryIcons(models.Model):
     """
 
     src = models.FileField(upload_to=category_image_directory_path, max_length=500, verbose_name='иконка')
-    category = models.OneToOneField(Category, on_delete=models.CASCADE, related_name='image', verbose_name='категория',
+    category = models.OneToOneField(Category, on_delete=models.CASCADE, related_name='images', verbose_name='категория',
                                     blank=True, null=True)
 
     class Meta:
@@ -86,6 +87,8 @@ class Product(models.Model):
     freeDelivery = models.BooleanField(default=False, verbose_name='бесплатная доставка')
     rating = models.PositiveIntegerField()
     active = models.BooleanField(default=False, verbose_name='активный')
+    image = models.FileField(upload_to=product_image_directory_path, verbose_name='изображение', null=True)
+
 
     class Meta:
         verbose_name = "Товар"
