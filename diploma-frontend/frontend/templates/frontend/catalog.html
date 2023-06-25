@@ -9,7 +9,7 @@
           <h1 class="Middle-title">Catalog Megano
           </h1>
           <ul class="breadcrumbs Middle-breadcrumbs">
-            <li class="breadcrumbs-item"><a href="/diploma-frontend/frontend/static">Home</a>
+            <li class="breadcrumbs-item"><a href="/">Home</a>
             </li>
             <li class="breadcrumbs-item breadcrumbs-item_current"><span>Каталог</span>
             </li>
@@ -138,9 +138,9 @@
 
             <!-- Получаем товары по фильтрам -->
             <div v-for="card in catalogCards" class="Card" :key="id">
-              <a class="Card-picture" :href="`/product/${card.id}`"><img :src="card.images[0].src" :alt="card.images[0].alt"/></a>
+              <a class="Card-picture" :href="`/product/${card.id}/`"><img :src="card.images[0].src" :alt="card.images[0].alt"/></a>
               <div class="Card-content">
-                <strong class="Card-title"><a :href="`/product/${card.id}`">${ card.title }$</a></strong>
+                <strong class="Card-title"><a :href="`/product/${card.id}/`">${ card.title }$</a></strong>
                 <div class="Card-description">
                   <div class="Card-cost"><span class="Card-price">$${ card.price }$</span></div>
                   <div class="Card-hover">

@@ -9,7 +9,7 @@
           <h1 class="Middle-title">Megano Sales
           </h1>
           <ul class="breadcrumbs Middle-breadcrumbs">
-            <li class="breadcrumbs-item"><a href="/diploma-frontend/frontend/static">Home</a>
+            <li class="breadcrumbs-item"><a href="/">Home</a>
             </li>
             <li class="breadcrumbs-item breadcrumbs-item_current"><span>Sales</span>
             </li>
@@ -23,7 +23,7 @@
 
           <!-- Получаем товар по скидке -->
           <div v-for="card in salesCards" class="Card">
-            <a :href="`/product/${card.id}`"><div class="Card-picture" >
+            <a :href="`/product/${card.id}/`"><div class="Card-picture" >
               <img :src="card.images[0].src" :alt="card.images[0].alt"/>
             </div>
               <div v-if="card.dateFrom" class="Card-date">
