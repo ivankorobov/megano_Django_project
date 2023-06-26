@@ -13,8 +13,12 @@ def profile_avatar_directory_path(instance: "Profile", filename: str):
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    phone = models.TextField(max_length=30, null=False, blank=True, default="+88009995544")
-    avatar = models.ImageField(null=True, blank=False, upload_to=profile_avatar_directory_path)
+    phone = models.TextField(
+        max_length=30, null=False, blank=True, default="+88009995544"
+    )
+    avatar = models.ImageField(
+        null=True, blank=False, upload_to=profile_avatar_directory_path
+    )
 
     @receiver(post_save, sender=User)
     def create_user_profile(sender, instance, created, **kwargs):

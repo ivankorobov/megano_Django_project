@@ -3,22 +3,30 @@ from .models import Order, ProductInOrder, Payment
 
 
 class OrderAdmin(admin.ModelAdmin):
-    list_display = ['user', 'date', 'status', 'payment_type', 'total_cost', 'city', 'address', ]
+    list_display = [
+        "user",
+        "date",
+        "status",
+        "payment_type",
+        "total_cost",
+        "city",
+        "address",
+    ]
 
 
 class ProductInOrderAdmin(admin.ModelAdmin):
     list_display = [
-        'order',
-        'product',
-        'count',
+        "order",
+        "product",
+        "count",
     ]
 
 
 class PaymentAdmin(admin.ModelAdmin):
     list_display = [
-        'order',
-        'name',
-        'total_cost',
+        "order",
+        "name",
+        "total_cost",
     ]
 
 

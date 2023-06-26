@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from products.models import Product
 
-CART_SESSION_ID = 'cart'
+CART_SESSION_ID = "cart"
 
 
 class Cart(object):
@@ -25,7 +25,7 @@ class Cart(object):
             cart[product_id]["product_id"] = product_id
             cart[product_id]["price"] = float(product.price)
             cart[product_id]["total_price"] = (
-                    cart[product_id]["price"] * cart[product_id]["quantity"]
+                cart[product_id]["price"] * cart[product_id]["quantity"]
             )
 
         sorted_cart = sorted(cart.values(), key=lambda item: item["product_id"])
@@ -70,23 +70,39 @@ class Cart(object):
 
 
 class Order(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='покупатель')
-    date = models.DateField(auto_now_add=True, verbose_name='дата заказа')
-    status = models.CharField(default='generated', max_length=50, null=False, blank=False)
-    payment_type = models.CharField(default='online', max_length=30, null=False, blank=False)
-    total_cost = models.DecimalField(default=0, max_digits=8, decimal_places=2, verbose_name='итоговая цена')
-    delivery_type = models.TextField(default='free', max_length=400, null=False, blank=False)
-    city = models.CharField(default='Moscow', max_length=120, null=False, blank=False)
-    address = models.CharField(default='red square 1', max_length=120, null=False, blank=False)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="покупатель")
+    date = models.DateField(auto_now_add=True, verbose_name="дата заказа")
+    status = models.CharField(
+        default="generated", max_length=50, null=False, blank=False
+    )
+    payment_type = models.CharField(
+        default="online", max_length=30, null=False, blank=False
+    )
+    total_cost = models.DecimalField(
+        default=0, max_digits=8, decimal_places=2, verbose_name="итоговая цена"
+    )
+    delivery_type = models.TextField(
+        default="free", max_length=400, null=False, blank=False
+    )
+    city = models.CharField(default="Moscow", max_length=120, null=False, blank=False)
+    address = models.CharField(
+        default="red square 1", max_length=120, null=False, blank=False
+    )
 
 
 class ProductInOrder(models.Model):
-    order = models.ForeignKey(Order, on_delete=models.CASCADE, verbose_name='заказ')
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, verbose_name='продукт')
-    count = models.PositiveIntegerField(default=1, null=False, blank=True, verbose_name='количество')
+    order = models.ForeignKey(Order, on_delete=models.CASCADE, verbose_name="заказ")
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, verbose_name="продукт"
+    )
+    count = models.PositiveIntegerField(
+        default=1, null=False, blank=True, verbose_name="количество"
+    )
 
 
 class Payment(models.Model):
-    order = models.ForeignKey(Order, on_delete=models.CASCADE, verbose_name='заказ')
-    name = models.TextField(default='fullname', max_length=120, null=False, blank=False)
-    total_cost = models.DecimalField(default=0, max_digits=8, decimal_places=2, verbose_name='оплатa')
+    order = models.ForeignKey(Order, on_delete=models.CASCADE, verbose_name="заказ")
+    name = models.TextField(default="fullname", max_length=120, null=False, blank=False)
+    total_cost = models.DecimalField(
+        default=0, max_digits=8, decimal_places=2, verbose_name="оплатa"
+    )
